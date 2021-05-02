@@ -1,0 +1,63 @@
+Questions 1. Select the framework for React.
+- React Webpack Config
+- Create React App
+- Next.js
+- Gatsby.js
+
+2. Select the preset.
+- Default (Javascript, npm, ESLint, Prettier, Jest)
+- Default (Javascript, yarn, ESLint, Prettier, Jest)
+- Default (Typescript, npm, ESLint, Prettier, Jest)
+- Default (Typescript, yarn, ESLint, Prettier, Jest)
+- Manually Configure 
+
+3. Enter Project Name.
+
+4. Choose your package manager
+- npm
+- yarn
+
+5. Do you want to answer package manager questions?
+- yes
+- no
+
+6. Do you want typescript?
+- yes 
+- no
+
+7. Pick your configs
+- ESLint
+- Prettier
+- GitHub Actions
+- Testing (Jest, React Testing Library)
+
+
+Future Plans
+1. Options to setup state management
+- Redux
+- XState
+- React Context useReducer
+- MobX
+
+2. Choose UI Library
+- Material UI
+- Tailwind CSS
+- Styled Components + Theme UI
+
+3. Setup Basic Custom Hooks
+- useSwitch
+- useToggle
+- useInput
+- useCounter
+
+4. Setup Storybooks?
+- yes
+- no
+
+5. Select the library for api calls.
+- axios
+- fetch
+- isomorphic-fetch
+- react-query
+
+
