@@ -1,7 +1,5 @@
-const JS = {
+const COMMON = {
   root: true,
-  extends: ['plugin:react/recommended', 'airbnb', 'airbnb/hooks', 'prettier'],
-  plugins: ['react', 'prettier'],
   env: {
     browser: true,
     jest: true,
@@ -10,20 +8,26 @@ const JS = {
   },
   globals: {
     Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
-  },
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
-    ecmaVersion: 12,
-    sourceType: 'module',
+    SharedArraybuffer: 'readonly',
   },
   settings: {
     react: {
       pragma: 'React',
       version: 'detect',
     },
+  },
+};
+
+const JS = {
+  ...COMMON,
+  extends: ['plugin:react/recommended', 'airbnb', 'airbnb/hooks', 'prettier'],
+  plugins: ['react', 'prettier'],
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 12,
+    sourceType: 'module',
   },
   rules: {
     'no-plusplus': 0,
@@ -34,7 +38,7 @@ const JS = {
 };
 
 const TS = {
-  root: true,
+  ...COMMON,
   extends: [
     'airbnb-typescript',
     'airbnb/hooks',
@@ -43,29 +47,13 @@ const TS = {
     'plugin:@typescript-eslint/recommended',
   ],
   plugins: ['react', '@typescript-eslint', 'prettier'],
-  env: {
-    browser: true,
-    jest: true,
-    node: true,
-    es6: true,
-  },
-  globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
-  },
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: 'module',
-    ecmaFeatures: { jsx: true },
+    ecmaFeatures: {jsx: true},
     tsconfigRootDir: __dirname,
     project: './tsconfig.eslint.json',
-  },
-  settings: {
-    react: {
-      pragma: 'React',
-      version: 'detect',
-    },
   },
   rules: {
     '@typescript-eslint/dot-notation': 0,
