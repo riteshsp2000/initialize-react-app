@@ -4,19 +4,8 @@ import inquirer from 'inquirer';
 // Utils.
 import configureManualSetup from './manualConfig';
 
-const DEFAULT_PRESETS = {
-  JS_NPM: 'Default (Javascript, npm, ESLint, Prettier, Jest)',
-  JS_YRN: 'Default (Javascript, yarn, ESLint, Prettier, Jest)',
-  TS_NPM: 'Default (Javascript, yarn, ESLint, Prettier, Jest)',
-  TS_YRN: 'Default (Javascript, yarn, ESLint, Prettier, Jest)',
-};
-
-const FRAMEWORKS = {
-  CRA: 'Create React App',
-  NEXT: 'Next.js',
-  GATSBY: 'Gatsby',
-  CUSTOM: 'Custom Webpack Config',
-};
+// Constants
+import {DEFAULT_PRESETS, FRAMEWORKS, defaultAnswers} from './constants';
 
 const initialize = async () => {
   const presetsAnswer = await inquirer.prompt([
@@ -68,18 +57,23 @@ const initialize = async () => {
     },
   ]);
 
-  const {preset} = presetsAnswer;
+  const {preset, framework, projectName} = presetsAnswer;
+  defaultAnswers.framework = framework;
+  defaultAnswers.repositoryName = projectName;
 
   if (preset === DEFAULT_PRESETS.JS_NPM) {
-    // TODO:
+    defaultAnswers.pkgManager = 'npm';
+    defaultAnswers.typeScript = false;
   } else if (preset === DEFAULT_PRESETS.JS_YRN) {
-    // TODO:
+    defaultAnswers.pkgManager = 'yarn';
+    defaultAnswers.typeScript = false;
   } else if (preset === DEFAULT_PRESETS.TS_NPM) {
-    // TODO:
+    defaultAnswers.pkgManager = 'npm';
   } else if (preset === DEFAULT_PRESETS.TS_YRN) {
-    // TODO:
+    defaultAnswers.pkgManager = 'yarn';
   } else {
     const answers = await configureManualSetup();
+    // eslint-disable-next-line no-console
     console.log(answers);
   }
 };
