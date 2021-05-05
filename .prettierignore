@@ -1,0 +1,9 @@
+.cache
+/node_modules/
+/out/
+/dist/
+/build/**
+/coverage/**
+/templates/**
+/__tests__/**
+.eslintrc.js

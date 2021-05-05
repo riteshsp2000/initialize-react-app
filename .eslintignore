@@ -1,0 +1,9 @@
+.cache
+/node_modules/
+/out/
+/public/
+/dist/
+/build/**
+/coverage/**
+/templates/**
+/__tests__/**
