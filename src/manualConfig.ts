@@ -1,7 +1,8 @@
 import inquirer from 'inquirer';
+import IDefaultAnswers from './interfaces/defaultAnswers';
 
-const configureManualSetup = async (): Promise<void> => {
-  const answers = await inquirer.prompt([
+const configureManualSetup = (): Promise<IDefaultAnswers> =>
+  inquirer.prompt([
     {
       type: 'list',
       message: '📦 Pick the package manager:',
@@ -72,8 +73,5 @@ const configureManualSetup = async (): Promise<void> => {
       },
     },
   ]);
-
-  return answers;
-};
 
 export default configureManualSetup;

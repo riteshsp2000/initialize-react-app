@@ -3,6 +3,7 @@ export const DEFAULT_PRESETS = {
   JS_YRN: 'Default (Javascript, yarn, ESLint, Prettier, Jest)',
   TS_NPM: 'Default (Javascript, yarn, ESLint, Prettier, Jest)',
   TS_YRN: 'Default (Javascript, yarn, ESLint, Prettier, Jest)',
+  MANUAL: 'Manually Configure',
 };
 
 export const FRAMEWORKS = {
