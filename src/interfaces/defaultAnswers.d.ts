@@ -6,8 +6,9 @@ interface IDefaultAnswers {
     | 'Custom Webpack Config';
   pkgManager: 'yarn' | 'npm';
   pkgQuestions: 'Go with defaults' | 'Answer questions';
+  repositoryName: string;
   typescript: boolean;
-  extralibs: ('ESLint' | 'Prettier' | 'dotenv' | 'nodemon' | 'Unit Tests')[];
+  extraLibs: ('ESLint' | 'Prettier' | 'dotenv' | 'nodemon' | 'Unit Tests')[];
   extraOptions: ('git' | 'LICENSE' | 'README')[];
   platformUsername: string;
   licenseType: 'MIT' | 'Apache-2.0' | 'DSC-3-Clause' | 'ISC' | 'GPL-3.0';

@@ -17,10 +17,10 @@ const initialize = async () => {
 
     if (preset === DEFAULT_PRESETS.JS_NPM) {
       defaultAnswers.pkgManager = 'npm';
-      defaultAnswers.typeScript = false;
+      defaultAnswers.typescript = false;
     } else if (preset === DEFAULT_PRESETS.JS_YRN) {
       defaultAnswers.pkgManager = 'yarn';
-      defaultAnswers.typeScript = false;
+      defaultAnswers.typescript = false;
     } else if (preset === DEFAULT_PRESETS.TS_NPM) {
       defaultAnswers.pkgManager = 'npm';
     } else if (preset === DEFAULT_PRESETS.TS_YRN) {

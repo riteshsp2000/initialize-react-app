@@ -1,3 +1,5 @@
+import IDefaultAnswers from './interfaces/defaultAnswers';
+
 export const DEFAULT_PRESETS = {
   JS_NPM: 'Default (Javascript, npm, ESLint, Prettier, Jest)',
   JS_YRN: 'Default (Javascript, yarn, ESLint, Prettier, Jest)',
@@ -13,18 +15,12 @@ export const FRAMEWORKS = {
   CUSTOM: 'Custom Webpack Config',
 };
 
-export const defaultAnswers = {
+export const defaultAnswers: IDefaultAnswers = {
   framework: 'Create React App',
   pkgManager: 'yarn',
   pkgQuestions: 'Go with defaults',
-  typeScript: true,
-  extraLibs: [
-    'ESLint',
-    'Prettier',
-    'dotenv',
-    'nodemon or ts-node-dev',
-    'Unit Tests',
-  ],
+  typescript: true,
+  extraLibs: ['ESLint', 'Prettier', 'dotenv', 'nodemon', 'Unit Tests'],
   extraOptions: ['git', 'LICENSE', 'README'],
   platformUsername: 'riteshsp2000',
   repositoryName: 'generate-react-app',
